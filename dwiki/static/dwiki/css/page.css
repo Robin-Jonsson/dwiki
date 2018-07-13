@@ -1,0 +1,19 @@
+.flex-container {
+  display: flex;
+  flex-direction: row; }
+
+#container {
+  height: 100vh; }
+  #container #left-panel,
+  #container #content {
+    height: 100%;
+    display: block;
+    overflow: auto;
+    padding: 15px;
+    box-sizing: border-box; }
+  #container #left-panel {
+    width: 300px;
+    border-right: 1px solid black;
+    white-space: nowrap; }
+  #container #content {
+    flex: 1; }

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block page_title %}dWiki | {{ page_title }}{% endblock %}
+{% block content %}
+<div id="container" class="flex-container">
+    <div id="left-panel">
+        {{ structure|safe }}
+    </div>
+
+    <div id="content">
+        {% load markup_tags %}
+        {{ content|apply_markup:"markdown" }}
+        <p>
+        </p>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block page_title %}dWiki{% endblock %}</title>
+        {% for stylesheet in stylesheets %}
+        <link rel="stylesheet" href="{% static stylesheet %}" type="text/css" />
+        {% endfor %}
+    </head>
+
+    <body>
+        <div id="content">
+            {% block content %}
+            Content...
+            {% endblock %}
+    </body>
+</html>
