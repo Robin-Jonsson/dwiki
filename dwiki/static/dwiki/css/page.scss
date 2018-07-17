@@ -1,0 +1,87 @@
+.flex-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#container {
+    height: 100vh;
+    background-color: #FFFFFF;
+
+    #left-panel,
+    #content {
+        height: 100%;
+        display: block;
+        overflow: auto;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    #left-panel {
+        width: 340px;
+        border-right: 1px solid #D9D9D9;
+        white-space: nowrap;
+        background-color: #F7F7F7;
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul {
+            list-style: none;
+
+            a.active {
+                text-decoration: underline;
+            }
+
+            li {
+                padding-top: 3px;
+                padding-bottom: 3px;
+
+                input.expandable {
+                    display: none;
+                }
+
+                ul {
+                    display: none;
+
+                    li {
+                        padding-left: 15px;
+                    }
+                }
+
+                input:checked ~ ul {
+                    display: initial;
+                }
+                input:checked ~ span {
+                    transform: rotate(90deg);
+                }
+
+                span {
+                    width: 12pt;
+                    height: 12pt;
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-top: -3px;
+                    margin-right: 3px;
+                    background-color: #333333;
+                    transition: transform 0.2s, background-color 0.2s;
+                }
+
+                span.list-bullet {
+                    -webkit-mask: url(../img/svg-icons/Entypo/dot-single.svg) no-repeat center;
+                    mask: url(../img/svg-icons/Entypo/dot-single.svg) no-repeat center;
+                }
+
+                span.list-arrow-right {
+                    -webkit-mask: url(../img/svg-icons/Entypo/chevron-right.svg) no-repeat center;
+                    mask: url(../img/svg-icons/Entypo/chevron-right.svg) no-repeat center;
+                }
+            }
+        }
+    }
+
+    #content {
+        flex: 1;
+    }
+}
