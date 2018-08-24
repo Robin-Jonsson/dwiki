@@ -30,6 +30,9 @@ Main Category2
 ...
 ```
 
+## Screenshot
+![Screenshot Example](screenshot-example.png)
+
 ## Recommendations
 - Change the SECRET_KEY in settings.py (in "production").
 - Set DEBUG in settings.py to False (in "production").
